@@ -52,7 +52,7 @@ async def get_json(endpoint: str, query: dict, mode="get", **kwargs) -> dict | s
     if not KEY:
         return "API key not found."
 
-    api_url = os.path.join("https://api.alldebrid.com/v4", endpoint)
+    api_url = os.path.join("https://api.alldebrid.com/v4.1", endpoint)
     params = {"agent": "bot", "apikey": KEY, **query}
 
     method = getattr(aio.session, mode)
